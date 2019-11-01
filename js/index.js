@@ -14,4 +14,12 @@ $(function () {
 		$(".burger-menu").css("animation", "burger-menu__animation-reverse linear .5s");
 		$(".burger-menu").css("left", "-100%");
 	});
+	$(".nav>a, .burger-menu>li>a").click(function (e) { 
+		e.preventDefault();
+		$("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 1000);
+	});
+	$(".burger-menu>li>a").click(function () {
+		$(".burger-menu").css("animation", "burger-menu__animation-reverse linear 0.5s");
+		$(".burger-menu").css("left", "-100%");
+	});
 });

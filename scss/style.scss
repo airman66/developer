@@ -132,7 +132,7 @@ body {
     background-color: #ffffff;
     z-index: 10001;
     margin-top: 0;
-    padding-top: 59px;
+    padding-top: 40px;
 
     li {
         padding-top: 2px;
@@ -141,10 +141,6 @@ body {
 
     @media (max-width: 770px) {
         display: block;
-    }
-
-    @media (max-width: 550px) {
-        padding-top: 27px;
     }
 
     i {
