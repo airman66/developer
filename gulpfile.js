@@ -7,6 +7,7 @@ let uglify = require("gulp-uglify");
 let htmlmin = require("gulp-htmlmin");
 let rename = require("gulp-rename");
 let del = require("del");
+let babel = require("gulp-babel");
 
 
 gulp.task("clean", async () => {
@@ -16,7 +17,7 @@ gulp.task("clean", async () => {
 gulp.task("export", () => {
     let buildHtml = gulp.src("./app/**/*.html").pipe(htmlmin({collapseWhitespace: true, removeComments: true})).pipe(gulp.dest("./dist"));
     let buildCss = gulp.src("./app/css/**/*.css").pipe(gulp.dest("./dist/css"));
-    let buildJs = gulp.src("./app/js/**/*.js").pipe(uglify()).pipe(gulp.dest("./dist/js"));
+    let buildJs = gulp.src("./app/js/**/*.js").pipe(babel({presets: ['@babel/env']})).pipe(uglify()).pipe(gulp.dest("./dist/js"));
     let buildImg = gulp.src("./app/img/**/*.*").pipe(imagemin()).pipe(gulp.dest("./dist/img"));
     let buildFonts = gulp.src("./app/fonts/**/*.*").pipe(gulp.dest("./dist/fonts"));
 });
