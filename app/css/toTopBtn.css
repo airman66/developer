@@ -1,0 +1,38 @@
+.toTopBtn {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.toTopBtn:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.toTopBtn:after {
+    content: "";
+    height: 50%;
+    width: 4px;
+    background-color: #fff;
+    position: absolute;
+    right: calc(25% + 2px);
+    top: 24%;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+.toTopBtn:before {
+    content: "";
+    height: 50%;
+    width: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: calc(25% + 2px);
+    top: 24%;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}

@@ -1,4 +1,5 @@
 $(function () {
+	createToTopBtn();
 	if ($(window).scrollTop() < $("#intro").innerHeight()) {
 		$("a.nav__link[href='#intro']").addClass("nav__link--active");
 	} else $("a.nav__link[href='#intro']").removeClass("nav__link--active");
